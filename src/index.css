@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* Global Root Variables for Theming */
+:root {
+  font-family: 'Inter', sans-serif;
+
+  /* Deep Slate Theme Colors */
+  --color-bg-primary: #020617;
+  /* Slate 950 - Main Background */
+  --color-bg-secondary: #0f172a;
+  /* Slate 900 - Card/Section Background */
+
+  /* Accent Colors */
+  --color-accent-primary: #38bdf8;
+  /* Sky 400 - Primary Highlight */
+  --color-accent-secondary: #818cf8;
+  /* Indigo 400 - Secondary Gradient */
+
+  /* Text Colors */
+  --color-text-primary: #f8fafc;
+  /* Slate 50 - Headings/Important Text */
+  --color-text-secondary: #94a3b8;
+  /* Slate 400 - Body Text */
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
+
+  /* Custom Text Selection Color */
+  selection-background-color: rgba(56, 189, 248, 0.3);
+  selection-color: #fff;
+}
+
+/* Heading Fonts - Modern Sans-Serif */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar Styles for Chrome/Edge/Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+  /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  /* Handle color */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+  /* Handle hover color */
+}
+
+/* Global Utility Classes */
+
+/* Glassmorphism Effect */
+/* Adds blur and semi-transparent background for modern card look */
+.glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient Text Utility */
+/* Creates a text fill with the accent gradient */
+.text-gradient {
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
