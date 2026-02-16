@@ -19,13 +19,13 @@ const SkillsExperience = () => {
             year: '2024 - Present',
             role: 'Freelance Mobile Developer',
             company: 'Self-Employed',
-            desc: 'Architected full-stack e-commerce solutions with Flutter & Paystack integration.'
+            desc: 'Built a Fullstack Ecommerce Application designed for a modern online shopping experience, featuring dynamic product catalog, interactive shopping cart and Paystack integration for seamless payment.'
         },
         {
             year: '2022 - 2024',
             role: 'Freelance Web Developer',
             company: 'Kings Dave IT Solutions',
-            desc: 'Developed SEO-optimized business websites and digitalized local business operations.'
+            desc: 'Developed responsive and accessible web interfaces for firms and small businesses, with attention to SEO best practices. Built and maintained custom business websites using HTML, CSS, and JavaScript. Consulted with small business owners to digitalize operations.'
         }
     ];
 
