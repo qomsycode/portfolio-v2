@@ -42,7 +42,7 @@ const Hero = () => {
                             View Projects
                         </a>
                         <a
-                            href="/resume.pdf" // Ensure resume.pdf is in the public folder
+                            href="/resume.pdf" target="_blank" rel="noopener noreferrer" // Ensure resume.pdf is in the public folder
                             className="px-8 py-4 border border-slate-700 text-slate-300 font-bold rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 flex items-center gap-2"
                         >
                             <AiOutlineDownload size={20} />
@@ -55,7 +55,7 @@ const Hero = () => {
                         <a href="https://github.com/qomsycode" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                             <AiFillGithub size={30} />
                         </a>
-                        <a href="https://www.linkedin.com/in/qomzyy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                        <a href="https://www.linkedin.com/in/qoyum-abdullateef-0911bb252" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                             <AiFillLinkedin size={30} />
                         </a>
                     </div>

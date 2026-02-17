@@ -20,7 +20,7 @@ const Projects = () => {
             description: 'Full-stack platform with dynamic inventory, cart management, and admin dashboard.',
             tech: ['Flutter', 'Firebase', 'State Management'],
             github: '#',
-            live: '#',
+            live: 'https://qomsycode.github.io/Adeeva-Ecommerce-App/',
             gradient: 'from-violet-500 to-purple-500'
         },
         {
@@ -29,7 +29,7 @@ const Projects = () => {
             description: 'Real-time global time tracking utility consuming external Time APIs for precision.',
             tech: ['Flutter', 'REST API'],
             github: '#',
-            live: '#',
+            live: 'https://qomsycode.github.io/world_clock/',
             gradient: 'from-blue-400 to-cyan-300'
         },
         {
@@ -38,7 +38,7 @@ const Projects = () => {
             description: 'Professional networking tool connecting developers through smart profiles and messaging.',
             tech: ['Dart', 'Flutter', 'NoSQL'],
             github: '#',
-            live: '#',
+            live: 'https://qomsycode.github.io/Quadrant-Networking-App/',
             gradient: 'from-emerald-400 to-teal-500'
         }
     ];

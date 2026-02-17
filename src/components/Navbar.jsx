@@ -53,8 +53,8 @@ const Navbar = () => {
             <div
                 className={
                     nav
-                        ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] h-full bg-[#020617] border-r border-slate-800 ease-in-out duration-500 z-40 flex flex-col p-8'
-                        : 'fixed left-[-100%] top-0 h-full ease-in-out duration-500 z-40' // Slide interactions
+                        ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] h-full bg-[#020617] border-r border-slate-800 ease-in-out duration-500 z-50 flex flex-col p-8 shadow-2xl'
+                        : 'fixed left-[-100%] top-0 h-full ease-in-out duration-500 z-50' // Slide interactions
                 }
             >
                 <h1 className="text-3xl font-bold text-white mb-8">
