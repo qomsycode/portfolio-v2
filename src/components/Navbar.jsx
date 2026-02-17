@@ -24,38 +24,42 @@ const Navbar = () => {
     ];
 
     return (
-        // Main Navbar Container: Fixed position, Glassmorphism effect
-        <div className="fixed w-full flex justify-between p-4 items-center gap-6 glass z-50 top-0 left-0 bg-opacity-60 backdrop-blur-md border-b-[1px] border-white/10">
-            {/* Logo Section */}
-            <div className="text-2xl font-bold tracking-tighter text-white ml-4 md:ml-12 cursor-pointer">
-                <a href="#home">
-                    Qomzyy<span className="text-sky-400">.</span>
-                </a>
+        // Wrap in Fragment to separate Mobile Menu from Fixed Header
+        <>
+            {/* Main Navbar Container */}
+            <div className="fixed w-full flex justify-between p-4 items-center gap-6 glass z-[50] top-0 left-0 bg-opacity-60 backdrop-blur-md border-b-[1px] border-white/10">
+                {/* Logo Section */}
+                <div className="text-2xl font-bold tracking-tighter text-white ml-4 md:ml-12 cursor-pointer">
+                    <a href="#home">
+                        Qomzyy<span className="text-sky-400">.</span>
+                    </a>
+                </div>
+
+                {/* Desktop Menu - Hidden on small screens */}
+                <ul className="hidden md:flex gap-8 mr-12 text-slate-300 font-medium">
+                    {navItems.map((item) => (
+                        <li key={item.id} className="hover:text-white transition-colors duration-300 cursor-pointer relative group">
+                            <a href={item.link}>{item.text}</a>
+                            {/* Animated Underline Effect */}
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                        </li>
+                    ))}
+                </ul>
+
+                {/* Mobile Menu Icon (Burger/Close) - Visible only on small screens */}
+                <div onClick={toggleNav} className="block md:hidden text-slate-300 mr-4 cursor-pointer z-50">
+                    {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+                </div>
             </div>
 
-            {/* Desktop Menu - Hidden on small screens */}
-            <ul className="hidden md:flex gap-8 mr-12 text-slate-300 font-medium">
-                {navItems.map((item) => (
-                    <li key={item.id} className="hover:text-white transition-colors duration-300 cursor-pointer relative group">
-                        <a href={item.link}>{item.text}</a>
-                        {/* Animated Underline Effect */}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
-                    </li>
-                ))}
-            </ul>
-
-            {/* Mobile Menu Icon (Burger/Close) - Visible only on small screens */}
-            <div onClick={toggleNav} className="block md:hidden text-slate-300 mr-4 cursor-pointer z-50">
-                {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
-            </div>
-
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Menu Overlay - OUTSIDE of the glass container to avoid transparency inheritance */}
             <div
                 className={
                     nav
-                        ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] h-full bg-[#020617] border-r border-slate-800 ease-in-out duration-500 z-[100] flex flex-col p-8 shadow-2xl'
-                        : 'fixed left-[-100%] top-0 h-full ease-in-out duration-500 z-[100]' // Slide interactions
+                        ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] h-screen bg-[#020617] border-r border-slate-800 ease-in-out duration-500 z-[100] flex flex-col p-8 shadow-2xl overflow-y-auto'
+                        : 'fixed left-[-100%] top-0 h-screen ease-in-out duration-500 z-[100]'
                 }
+                style={{ backgroundColor: '#020617' }} // Inline style to force opaque background
             >
                 <h1 className="text-3xl font-bold text-white mb-8">
                     Qomzyy<span className="text-sky-400">.</span>
@@ -74,9 +78,15 @@ const Navbar = () => {
                     ))}
                 </ul>
             </div>
-            {/* Backdrop for Mobile Menu - Closes menu when clicked */}
-            {nav && <div className="fixed inset-0 bg-black/80 z-[90] md:hidden" onClick={closeNav}></div>}
-        </div>
+
+            {/* Backdrop for Mobile Menu */}
+            {nav && (
+                <div
+                    className="fixed inset-0 bg-black/80 z-[90] md:hidden backdrop-blur-sm"
+                    onClick={closeNav}
+                ></div>
+            )}
+        </>
     );
 };
 

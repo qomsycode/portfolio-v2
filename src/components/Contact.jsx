@@ -21,22 +21,22 @@ const Contact = () => {
                 <p className="text-sky-400 font-bold uppercase tracking-widest text-sm mb-4">Get In Touch</p>
                 <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">Let's Work Together</h2>
                 <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-12">
-                    I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    I am currently open to discussing new projects and opportunities. Whether you have a question or would like to collaborate, feel free to reach out.
                 </p>
 
                 {/* Primary CTA Button */}
                 <div className="flex justify-center gap-6 mb-16">
                     <a href="mailto:abdullateefqoyum02@gmail.com" className="px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-sky-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-white/10">
-                        Say Hello
+                        Get In Touch
                     </a>
                 </div>
 
                 {/* Social Media Icons Row */}
                 <div className="flex justify-center gap-8 flex-wrap">
                     <SocialLink href="https://github.com/qomsycode" icon={<FaGithub size={24} />} />
-                    <SocialLink href="https://www.linkedin.com/in/qomzyy" icon={<FaLinkedinIn size={24} />} />
+                    <SocialLink href="https://www.linkedin.com/in/qoyum-abdullateef-0911bb252" icon={<FaLinkedinIn size={24} />} />
                     <SocialLink href="mailto:abdullateefqoyum02@gmail.com" icon={<AiOutlineMail size={24} />} />
-                    <SocialLink href="http://twitter.com/qomzyy" icon={<FaTwitter size={24} />} />
+                    <SocialLink href="http://twitter.com/qomsyy" icon={<FaTwitter size={24} />} />
                     <SocialLink href="https://www.facebook.com/abdullateef.koyum" icon={<FaFacebook size={24} />} />
                 </div>
             </motion.div>
