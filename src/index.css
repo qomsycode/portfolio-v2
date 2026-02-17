@@ -24,15 +24,21 @@
 }
 
 /* Base Body Styles */
+html,
 body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   overflow-x: hidden;
   /* Prevent horizontal scroll */
+  width: 100%;
+  position: relative;
 
   /* Custom Text Selection Color */
-  selection-background-color: rgba(56, 189, 248, 0.3);
-  selection-color: #fff;
+}
+
+::selection {
+  background-color: rgba(56, 189, 248, 0.3);
+  color: #fff;
 }
 
 /* Heading Fonts - Modern Sans-Serif */
@@ -80,6 +86,7 @@ h6 {
 /* Creates a text fill with the accent gradient */
 .text-gradient {
   background: linear-gradient(to right, #38bdf8, #818cf8);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

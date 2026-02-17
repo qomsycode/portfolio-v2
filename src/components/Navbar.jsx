@@ -53,8 +53,8 @@ const Navbar = () => {
             <div
                 className={
                     nav
-                        ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] h-full bg-[#020617] border-r border-slate-800 ease-in-out duration-500 z-50 flex flex-col p-8 shadow-2xl'
-                        : 'fixed left-[-100%] top-0 h-full ease-in-out duration-500 z-50' // Slide interactions
+                        ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] h-full bg-[#020617] border-r border-slate-800 ease-in-out duration-500 z-[100] flex flex-col p-8 shadow-2xl'
+                        : 'fixed left-[-100%] top-0 h-full ease-in-out duration-500 z-[100]' // Slide interactions
                 }
             >
                 <h1 className="text-3xl font-bold text-white mb-8">
@@ -75,7 +75,7 @@ const Navbar = () => {
                 </ul>
             </div>
             {/* Backdrop for Mobile Menu - Closes menu when clicked */}
-            {nav && <div className="fixed inset-0 bg-black/50 z-30 md:hidden" onClick={closeNav}></div>}
+            {nav && <div className="fixed inset-0 bg-black/80 z-[90] md:hidden" onClick={closeNav}></div>}
         </div>
     );
 };
