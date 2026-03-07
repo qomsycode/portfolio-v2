@@ -40,6 +40,15 @@ const Projects = () => {
             github: '#',
             live: 'https://qomsycode.github.io/Quadrant-Networking-App/',
             gradient: 'from-emerald-400 to-teal-500'
+        },
+        {
+            id: 5,
+            title: 'Adventure Tourism',
+            description: 'A responsive tourism and travel web application featuring immersive destination showcases.',
+            tech: ['React', 'Vite', 'CSS'],
+            github: '#',
+            live: 'https://adventure-tourism-murex.vercel.app/',
+            gradient: 'from-orange-400 to-amber-500'
         }
     ];
 
